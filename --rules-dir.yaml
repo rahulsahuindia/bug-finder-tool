@@ -1,0 +1,11 @@
+- id: NO_HARDCODED_SECRETS
+  pattern: "password\\s*=\\s*['\"][^'\"]+['\"]"
+  language: generic
+  message: "Hardcoded password detected"
+  severity: critical
+
+- id: SQL_INJECTION
+  pattern: "execute\\(f.*\\{.*\\}.*\\)"
+  language: python
+  message: "Potential SQL injection – use parameterized queries"
+  severity: high
