@@ -1,0 +1,11 @@
+name: 'Bug Finder'
+description: 'Scan repository for bugs and vulnerabilities'
+inputs:
+  github_token:
+    description: 'GitHub token for creating check runs'
+    required: true
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
+  args:
+    - ${{ inputs.github_token }}
