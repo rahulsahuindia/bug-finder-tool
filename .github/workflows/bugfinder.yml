@@ -1,0 +1,11 @@
+name: Bug Finder
+on: [push, pull_request]
+jobs:
+  scan:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Bug Finder
+        uses: your-username/bugfinder-action@v1
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
