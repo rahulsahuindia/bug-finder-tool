@@ -6,6 +6,6 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - name: Bug Finder
-        uses: your-username/bugfinder-action@v1
+        uses: rahulsahuindia/bugfinder-action@v1
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
